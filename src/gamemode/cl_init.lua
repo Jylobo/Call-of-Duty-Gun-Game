@@ -61,32 +61,7 @@ hook.Add( "HUDPaint", "COD_HUD", function()
 				per_lose = kills_1
 			end
 		end
-
-		--[[-------------------------------------------------------------------------
-		Draw the RenderView for the 'minimap'
-		---------------------------------------------------------------------------]]
-	    local CamData = {}
-	    CamData.angles = Angle(90,90,-player:GetAimVector():Angle().y + 90)
-	    CamData.origin = Vector(player:GetPos().x,player:GetPos().y,500)
-	    CamData.x = 20
-	    CamData.y = 20
-	    CamData.w = 175
-	    CamData.h = 175   
-	    CamData.drawviewmodel = false
-	    render.RenderView( CamData )
-
-	    surface.SetDrawColor( Color( 255, 255, 255, 120 ) )
-		surface.DrawOutlinedRect( 19, 19, 177, 177 )
-		surface.SetDrawColor( Color( 245,226,167, 240 ) )
-
-		local triangle = {
-			{ x = 100, y = 110 },
-			{ x = 105, y = 100 },
-			{ x = 110, y = 110 }
-		}
-
-		surface.DrawPoly( triangle )
-
+			
 		--[[-------------------------------------------------------------------------
 		Draw the winning box
 		---------------------------------------------------------------------------]]
