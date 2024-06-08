@@ -1,9 +1,3 @@
-# Call of Duty - Gun Game | Settings
-
-The `settings.lua` file can be found in `cod_gungame/gamemode/`.
-
-## Settings.lua
-```lua
 --[[-------------------------------------------------------------------------
 Enable or disable the usage of the M9K weapon packs.
 
@@ -19,7 +13,7 @@ Required addon IDs:
 
 NOTE: If you disable this, the weapons in the pre-made weapon list won't work!
 ---------------------------------------------------------------------------]]
-GG_USE_M9K = true
+GG_USE_M9K = false
 
 --[[-------------------------------------------------------------------------
 Enable or disable the usage of MW2 playermodels.
@@ -33,7 +27,7 @@ Required addon ID:
 
 NOTE: If you disable this, the skins in the pre-made skins list won't work!
 ---------------------------------------------------------------------------]]
-GG_USE_MW2_SKINS = true
+GG_USE_MW2_SKINS = false
 
 --[[-------------------------------------------------------------------------
 This is the list with weapons used during the game. You can edit the list if
@@ -44,26 +38,26 @@ Note: If somehow the weapons in the list below don't work, the back-up
 weapons list will be used instead.
 ---------------------------------------------------------------------------]]
 GG_WEAPONS_LIST = {
-	{ weapon = "m9k_coltpython", ammo = 30 }, -- Colt Python
-	{ weapon = "m9k_sig_p229r", ammo = 30 }, -- SIG P229R
-	{ weapon = "m9k_glock", ammo = 64 }, -- Glock 18
-	{ weapon = "m9k_mp9", ammo = 60 }, -- MP9
-	{ weapon = "m9k_mp5", ammo = 60 }, -- MP5
-	{ weapon = "m9k_smgp90", ammo = 100 }, -- P90
-	{ weapon = "m9k_mp7", ammo = 60 }, -- MP7
-	{ weapon = "m9k_ak47", ammo = 60 }, -- AK47
-	{ weapon = "m9k_scar", ammo = 60 }, -- SCAR
-	{ weapon = "m9k_auga3", ammo = 60 }, -- AUG A3
-	{ weapon = "m9k_pkm", ammo = 150 }, -- PKM
-	{ weapon = "m9k_m249lmg", ammo = 150 }, -- M249
-	{ weapon = "m9k_ithacam37", ammo = 30 }, -- Ithacam 37
-	{ weapon = "m9k_m3", ammo = 30 }, -- M3
-	{ weapon = "m9k_1887winchester", ammo = 12 }, -- 1887 Winchester
-	{ weapon = "m9k_m14sp", ammo = 40 }, -- M14
-	{ weapon = "m9k_m98b", ammo = 60 }, -- M98B
-	{ weapon = "m9k_aw50", ammo = 60 }, -- AW50
-	{ weapon = "m9k_m79gl", ammo = 2 }, -- M79GL
-	{ weapon = "m9k_rpg7", ammo = 1 }, -- RPG7
+	{ weapon = "arc9_cod2019_pi_357", ammo = 30 }, -- revolver
+	{ weapon = "arc9_cod2019_pi_m1911_akimbo", ammo = 60 }, -- M1911 akimbo
+	{ weapon = "arc9_cod2019_sh_origin12", ammo = 64 }, -- Origin 12 shotgun
+	{ weapon = "arc9_cod2019_sh_model680", ammo = 60 }, -- model 680 shotgun
+	{ weapon = "arc9_cod2019_sm_mp5", ammo = 60 }, -- MP5
+	{ weapon = "arc9_cod2019_sm_p90", ammo = 100 }, -- P90
+	{ weapon = "arc9_cod2019_sm_vector", ammo = 60 }, -- Vector
+	{ weapon = "arc9_cod2019_ar_fal", ammo = 32 }, -- Fal
+	{ weapon = "arc9_cod2019_ar_famas", ammo = 60 }, -- Famas
+	{ weapon = "arc9_cod2019_ar_oden", ammo = 60 }, -- Oden
+	{ weapon = "arc9_cod2019_ar_ak47", ammo = 60 }, -- Ak47
+	{ weapon = "arc9_cod2019_ar_m4", ammo = 60 }, -- M4A1
+	{ weapon = "arc9_cod2019_lm_mg34", ammo = 150 }, -- MG43
+	{ weapon = "arc9_cod2019_lm_pkm", ammo = 200 }, -- PKM
+	{ weapon = "arc9_cod2019_sn_ax50", ammo = 20 }, -- AX50
+	{ weapon = "arc9_cod2019_sn_rytec", ammo = 40 }, -- AMR
+	{ weapon = "arc9_cod2019_la_rpg", ammo = 4 }, -- RPG
+	{ weapon = "arc9_cod2019_la_m32", ammo = 12 }, -- MGL
+	{ weapon = "arc9_cod2019_mm_crossbow", ammo = 6 }, -- Crossbow
+	{ weapon = "arc9_cod2019_nade_knife", ammo = 5 }, -- Knife
 }
 
 --[[-------------------------------------------------------------------------
@@ -99,7 +93,7 @@ This is the secondary weapon which should be a melee weapon of some sort.
 Note: If somehow the melee weapon down below doesn't work, the back-up melee
 weapon will be used instead.
 ---------------------------------------------------------------------------]]
-GG_KNIFE = "m9k_knife"
+GG_KNIFE = "arc9_cod2019_me_knife"
 GG_KNIFE_THROW = "m9k_thrown_spec_knife"
 
 --[[-------------------------------------------------------------------------
@@ -118,20 +112,12 @@ Note: If somehow the skins in the list below don't work, the backup list will
 be used instead. Leave this list untouched!
 ---------------------------------------------------------------------------]]
 GG_SKINS_LIST = {
-	"models/codmw2/codmw2.mdl",
-	"models/codmw2/codmw2h.mdl",
-	"models/codmw2/codmw2he.mdl",
-	"models/codmw2/codmw2hexe.mdl",
-	"models/codmw2/codmw2m.mdl",
-	"models/codmw2/t_codm.mdl",
-	"models/codmw2/t_codmw2.mdl",
-	"models/codmw2/t_codmw2h.mdl",
-	"models/mw2guy/rus/gassoldier.mdl",
-	"models/mw2guy/rus/soldier_a.mdl",
-	"models/mw2guy/rus/soldier_c.mdl",
-	"models/mw2guy/rus/soldier_d.mdl",
-	"models/mw2guy/rus/soldier_e.mdl",
-	"models/mw2guy/rus/soldier_f.mdl",
+	"models/kyodementia/milsim_ar_PM.mdl",
+	"models/kyodementia/milsim_dmr_PM.mdl",
+	"models/kyodementia/milsim_lmg_PM.mdl",
+	"models/kyodementia/milsim_sg_PM.mdl",
+	"models/kyodementia/milsim_smg_PM.mdl",
+	"models/kyodementia/milsim_sas_PM.mdl",
 }
 
 --[[-------------------------------------------------------------------------
@@ -207,4 +193,3 @@ GG_MYSQL_POST = 3306
 KEEP THIS DISABLED ON REAL SERVERS - FOR DEBUGGING ONLY!
 ---------------------------------------------------------------------------]]
 GG_DEBUG = false
-```
